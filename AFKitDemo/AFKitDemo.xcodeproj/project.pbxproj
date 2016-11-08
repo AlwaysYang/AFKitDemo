@@ -81,6 +81,7 @@
 		5742F2881DD21CCF006583E0 = {
 			isa = PBXGroup;
 			children = (
+				5742F2C71DD21D27006583E0 /* kit */,
 				5742F2931DD21CCF006583E0 /* AFKitDemo */,
 				5742F2AD1DD21CCF006583E0 /* AFKitDemoTests */,
 				5742F2B81DD21CCF006583E0 /* AFKitDemoUITests */,
@@ -138,6 +139,46 @@
 				5742F2BB1DD21CCF006583E0 /* Info.plist */,
 			);
 			path = AFKitDemoUITests;
+			sourceTree = "<group>";
+		};
+		5742F2C71DD21D27006583E0 /* kit */ = {
+			isa = PBXGroup;
+			children = (
+				5742F2C81DD21D27006583E0 /* Base */,
+			);
+			name = kit;
+			path = AFKitDemo/kit;
+			sourceTree = "<group>";
+		};
+		5742F2C81DD21D27006583E0 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				5742F2C91DD21D27006583E0 /* Foundation */,
+				5742F2CA1DD21D27006583E0 /* Quartz */,
+				5742F2CB1DD21D27006583E0 /* UIKit */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		5742F2C91DD21D27006583E0 /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		5742F2CA1DD21D27006583E0 /* Quartz */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Quartz;
+			sourceTree = "<group>";
+		};
+		5742F2CB1DD21D27006583E0 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -507,6 +548,7 @@
 				5742F2C01DD21CCF006583E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5742F2C11DD21CCF006583E0 /* Build configuration list for PBXNativeTarget "AFKitDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +557,7 @@
 				5742F2C31DD21CCF006583E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5742F2C41DD21CCF006583E0 /* Build configuration list for PBXNativeTarget "AFKitDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -523,6 +566,7 @@
 				5742F2C61DD21CCF006583E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
