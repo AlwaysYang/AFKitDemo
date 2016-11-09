@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		46E286941DD3108600494188 /* NSString+AFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E286931DD3108600494188 /* NSString+AFAdd.m */; };
+		46E2869A1DD313FC00494188 /* NSNumber+AFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E286991DD313FC00494188 /* NSNumber+AFAdd.m */; };
+		46E2869D1DD3141600494188 /* NSObject+AFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E2869C1DD3141600494188 /* NSObject+AFAdd.m */; };
+		46E286A01DD3143100494188 /* NSData+AFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E2869F1DD3143100494188 /* NSData+AFAdd.m */; };
+		46E286A31DD3144500494188 /* NSArray+AFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E286A21DD3144500494188 /* NSArray+AFAdd.m */; };
+		46E286A61DD3145C00494188 /* NSDictionary+AFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E286A51DD3145C00494188 /* NSDictionary+AFAdd.m */; };
+		46E286A91DD3147200494188 /* NSDate+AFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E286A81DD3147200494188 /* NSDate+AFAdd.m */; };
+		46E286AC1DD3149500494188 /* NSNotificationCenter+AFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E286AB1DD3149500494188 /* NSNotificationCenter+AFAdd.m */; };
+		46E286AF1DD314AA00494188 /* NSTimer+AFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E286AE1DD314AA00494188 /* NSTimer+AFAdd.m */; };
+		46E286B21DD31B9500494188 /* NSString+Input.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E286B11DD31B9500494188 /* NSString+Input.m */; };
 		5742F2961DD21CCF006583E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742F2951DD21CCF006583E0 /* main.m */; };
 		5742F2991DD21CCF006583E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742F2981DD21CCF006583E0 /* AppDelegate.m */; };
 		5742F29C1DD21CCF006583E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742F29B1DD21CCF006583E0 /* ViewController.m */; };
@@ -35,6 +45,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		46E286911DD30CC900494188 /* AFKitMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AFKitMacro.h; sourceTree = "<group>"; };
+		46E286921DD3108600494188 /* NSString+AFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+AFAdd.h"; path = "AFKitDemo/kit/Base/NSString+AFAdd.h"; sourceTree = SOURCE_ROOT; };
+		46E286931DD3108600494188 /* NSString+AFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+AFAdd.m"; path = "AFKitDemo/kit/Base/NSString+AFAdd.m"; sourceTree = SOURCE_ROOT; };
+		46E286981DD313FC00494188 /* NSNumber+AFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNumber+AFAdd.h"; path = "AFKitDemo/kit/Base/NSNumber+AFAdd.h"; sourceTree = SOURCE_ROOT; };
+		46E286991DD313FC00494188 /* NSNumber+AFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+AFAdd.m"; path = "AFKitDemo/kit/Base/NSNumber+AFAdd.m"; sourceTree = SOURCE_ROOT; };
+		46E2869B1DD3141600494188 /* NSObject+AFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+AFAdd.h"; path = "AFKitDemo/kit/Base/NSObject+AFAdd.h"; sourceTree = SOURCE_ROOT; };
+		46E2869C1DD3141600494188 /* NSObject+AFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+AFAdd.m"; path = "AFKitDemo/kit/Base/NSObject+AFAdd.m"; sourceTree = SOURCE_ROOT; };
+		46E2869E1DD3143100494188 /* NSData+AFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+AFAdd.h"; path = "AFKitDemo/kit/Base/NSData+AFAdd.h"; sourceTree = SOURCE_ROOT; };
+		46E2869F1DD3143100494188 /* NSData+AFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+AFAdd.m"; path = "AFKitDemo/kit/Base/NSData+AFAdd.m"; sourceTree = SOURCE_ROOT; };
+		46E286A11DD3144500494188 /* NSArray+AFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+AFAdd.h"; path = "AFKitDemo/kit/Base/NSArray+AFAdd.h"; sourceTree = SOURCE_ROOT; };
+		46E286A21DD3144500494188 /* NSArray+AFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+AFAdd.m"; path = "AFKitDemo/kit/Base/NSArray+AFAdd.m"; sourceTree = SOURCE_ROOT; };
+		46E286A41DD3145C00494188 /* NSDictionary+AFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+AFAdd.h"; path = "AFKitDemo/kit/Base/NSDictionary+AFAdd.h"; sourceTree = SOURCE_ROOT; };
+		46E286A51DD3145C00494188 /* NSDictionary+AFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+AFAdd.m"; path = "AFKitDemo/kit/Base/NSDictionary+AFAdd.m"; sourceTree = SOURCE_ROOT; };
+		46E286A71DD3147200494188 /* NSDate+AFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDate+AFAdd.h"; path = "AFKitDemo/kit/Base/NSDate+AFAdd.h"; sourceTree = SOURCE_ROOT; };
+		46E286A81DD3147200494188 /* NSDate+AFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDate+AFAdd.m"; path = "AFKitDemo/kit/Base/NSDate+AFAdd.m"; sourceTree = SOURCE_ROOT; };
+		46E286AA1DD3149500494188 /* NSNotificationCenter+AFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotificationCenter+AFAdd.h"; path = "AFKitDemo/kit/Base/NSNotificationCenter+AFAdd.h"; sourceTree = SOURCE_ROOT; };
+		46E286AB1DD3149500494188 /* NSNotificationCenter+AFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotificationCenter+AFAdd.m"; path = "AFKitDemo/kit/Base/NSNotificationCenter+AFAdd.m"; sourceTree = SOURCE_ROOT; };
+		46E286AD1DD314AA00494188 /* NSTimer+AFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSTimer+AFAdd.h"; path = "AFKitDemo/kit/Base/NSTimer+AFAdd.h"; sourceTree = SOURCE_ROOT; };
+		46E286AE1DD314AA00494188 /* NSTimer+AFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSTimer+AFAdd.m"; path = "AFKitDemo/kit/Base/NSTimer+AFAdd.m"; sourceTree = SOURCE_ROOT; };
+		46E286B01DD31B9500494188 /* NSString+Input.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Input.h"; path = "AFKitDemo/kit/Base/NSString+Input.h"; sourceTree = SOURCE_ROOT; };
+		46E286B11DD31B9500494188 /* NSString+Input.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Input.m"; path = "AFKitDemo/kit/Base/NSString+Input.m"; sourceTree = SOURCE_ROOT; };
 		5742F2911DD21CCF006583E0 /* AFKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AFKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5742F2951DD21CCF006583E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5742F2971DD21CCF006583E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,6 +184,7 @@
 		5742F2C81DD21D27006583E0 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				46E286911DD30CC900494188 /* AFKitMacro.h */,
 				5742F2C91DD21D27006583E0 /* Foundation */,
 				5742F2CA1DD21D27006583E0 /* Quartz */,
 				5742F2CB1DD21D27006583E0 /* UIKit */,
@@ -163,6 +195,26 @@
 		5742F2C91DD21D27006583E0 /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
+				46E2869B1DD3141600494188 /* NSObject+AFAdd.h */,
+				46E2869C1DD3141600494188 /* NSObject+AFAdd.m */,
+				46E286921DD3108600494188 /* NSString+AFAdd.h */,
+				46E286931DD3108600494188 /* NSString+AFAdd.m */,
+				46E286B01DD31B9500494188 /* NSString+Input.h */,
+				46E286B11DD31B9500494188 /* NSString+Input.m */,
+				46E286981DD313FC00494188 /* NSNumber+AFAdd.h */,
+				46E286991DD313FC00494188 /* NSNumber+AFAdd.m */,
+				46E2869E1DD3143100494188 /* NSData+AFAdd.h */,
+				46E2869F1DD3143100494188 /* NSData+AFAdd.m */,
+				46E286A11DD3144500494188 /* NSArray+AFAdd.h */,
+				46E286A21DD3144500494188 /* NSArray+AFAdd.m */,
+				46E286A41DD3145C00494188 /* NSDictionary+AFAdd.h */,
+				46E286A51DD3145C00494188 /* NSDictionary+AFAdd.m */,
+				46E286A71DD3147200494188 /* NSDate+AFAdd.h */,
+				46E286A81DD3147200494188 /* NSDate+AFAdd.m */,
+				46E286AA1DD3149500494188 /* NSNotificationCenter+AFAdd.h */,
+				46E286AB1DD3149500494188 /* NSNotificationCenter+AFAdd.m */,
+				46E286AD1DD314AA00494188 /* NSTimer+AFAdd.h */,
+				46E286AE1DD314AA00494188 /* NSTimer+AFAdd.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -244,7 +296,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0800;
-				ORGANIZATIONNAME = AlwaysYang;
+				ORGANIZATIONNAME = AF;
 				TargetAttributes = {
 					5742F2901DD21CCF006583E0 = {
 						CreatedOnToolsVersion = 8.0;
@@ -315,8 +367,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5742F29C1DD21CCF006583E0 /* ViewController.m in Sources */,
+				46E286B21DD31B9500494188 /* NSString+Input.m in Sources */,
 				5742F2991DD21CCF006583E0 /* AppDelegate.m in Sources */,
+				46E2869A1DD313FC00494188 /* NSNumber+AFAdd.m in Sources */,
+				46E286941DD3108600494188 /* NSString+AFAdd.m in Sources */,
+				46E2869D1DD3141600494188 /* NSObject+AFAdd.m in Sources */,
+				46E286AC1DD3149500494188 /* NSNotificationCenter+AFAdd.m in Sources */,
+				46E286A31DD3144500494188 /* NSArray+AFAdd.m in Sources */,
+				46E286AF1DD314AA00494188 /* NSTimer+AFAdd.m in Sources */,
 				5742F2961DD21CCF006583E0 /* main.m in Sources */,
+				46E286A61DD3145C00494188 /* NSDictionary+AFAdd.m in Sources */,
+				46E286A01DD3143100494188 /* NSData+AFAdd.m in Sources */,
+				46E286A91DD3147200494188 /* NSDate+AFAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
