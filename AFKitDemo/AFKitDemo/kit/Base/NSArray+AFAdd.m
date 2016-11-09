@@ -68,7 +68,7 @@
 
 
 
-@implementation NSMutableArray (YYAdd)
+@implementation NSMutableArray (AFAdd)
 
 + (NSMutableArray *)arrayWithPlistData:(NSData *)plist {
     if (!plist) return nil;

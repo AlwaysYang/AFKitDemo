@@ -77,7 +77,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  Provide some some common method for `NSMutableArray`.
  */
-@interface NSMutableArray (YYAdd)
+@interface NSMutableArray (AFAdd)
 
 /**
  Creates and returns an array from a specified property list data.
