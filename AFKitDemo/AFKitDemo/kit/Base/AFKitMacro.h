@@ -86,6 +86,12 @@ return objc_getAssociatedObject(self, @selector(_setter_:)); \
 #endif
 #endif
 
+#pragma mark - 手机型号 系统版本
+
+#define IS_IPHONE_5 ( fabs( ( double )[ [ UIScreen mainScreen ] bounds ].size.height - ( double )568 ) < DBL_EPSILON )
+
+#define iOS(version) ([[UIDevice currentDevice].systemVersion floatValue] >= version)
+
 #pragma mark - 重写NSLog
 
 //重写NSLog,Debug模式下打印日志和当前行数
