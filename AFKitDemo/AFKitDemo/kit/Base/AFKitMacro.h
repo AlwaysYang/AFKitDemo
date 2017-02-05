@@ -8,7 +8,7 @@
 
 #ifndef AFKitMacro_h
 #define AFKitMacro_h
-
+#import "Masonry.h"
 
 /**
  Synthsize a dynamic object property in @implementation scope.
@@ -92,6 +92,9 @@ return objc_getAssociatedObject(self, @selector(_setter_:)); \
 
 #define iOS(version) ([[UIDevice currentDevice].systemVersion floatValue] >= version)
 
+// Fast to get iOS system version
+#define kIOSVersion ([UIDevice currentDevice].systemVersion.floatValue)
+
 #pragma mark - 重写NSLog
 
 //重写NSLog,Debug模式下打印日志和当前行数
@@ -137,11 +140,194 @@ return objc_getAssociatedObject(self, @selector(_setter_:)); \
 #define LightTextColor [UIColor lightTextColor]
 #define ClearColor [UIColor clearColor]
 
+
+#pragma mark - Font Font
+// Generate font with size
+#define AFFontWithSize(size) [UIFont systemFontOfSize:size]
+
+// Generate bold font with size.
+#define AFBoldFontWithSize(size) [UIFont boldSystemFontOfSize:size]
+
+
+#pragma mark - 本地图片的加载
+// More easy way to load an image.
+#define AFImageWithName(Name) ([UIImage imageNamed:Name])
+
+// More easy to load an image from file.
+#define AFImageOfFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:nil]])
+
+#pragma mark - 系统单例
+
+// More easy way to get user default object.
+#define AFUserDefaults [NSUserDefaults standardUserDefaults]
+
+// More easy way to get NSNotificationCenter object.
+#define AFNotificationCenter  [NSNotificationCenter defaultCenter]
+
+// More easy way to get [NSFileManager defaultManager]
+#define AFFileManager [NSFileManager defaultManager]
+
+// More easy way to post a notification from notification center.
+#define AFPostNotificationWithName(notificationName) \
+[kNotificationCenter postNotificationName:notificationName object:nil userInfo:nil]
+
+// More easy way to post a notification with user info from notification center.
+#define kPostNotificationWithNameAndUserInfo(notificationName, userInfo) \
+[kNotificationCenter postNotificationName:notificationName object:nil userInfo:userInfo]
+
 #pragma mark - 弹出框
 /*! 警告框-一个按钮【VC】 */
 #define AF_SHOW_ALERT(title, msg)  UIAlertController *afAlert = [UIAlertController alertControllerWithTitle:title  message:msg preferredStyle:UIAlertControllerStyleAlert];\
 [afAlert addAction:[UIAlertAction actionWithTitle:@"知道了" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {\
 }]];\
 [self presentViewController:afAlert animated:YES completion:nil];\
+
+#pragma mark - 验证
+
+// Judge whether it is an empty string.
+#define AFIsEmptyString(s) (s == nil || [s isKindOfClass:[NSNull class]] || ([s isKindOfClass:[NSString class]] && s.length == 0))
+
+
+// Judge whether it is a nil or null object.
+#define AFIsEmptyObject(obj) (obj == nil || [obj isKindOfClass:[NSNull class]])
+
+// Judge whether it is a vaid dictionary.
+#define AFIsDictionary(objDict) (objDict != nil && [objDict isKindOfClass:[NSDictionary class]])
+
+// Judge whether it is a valid array.
+#define AFIsArray(objArray) (objArray != nil && [objArray isKindOfClass:[NSArray class]])
+
+// Judge whether the device it is ipad.
+#define AFIsIPad \
+([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)]\
+&& [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+
+// Judge whether current orientation is landscape.
+#define AFIsLandscape (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
+
+#pragma mark - Blocks
+/**
+ *	This is a common block for handling error.
+ */
+typedef void (^HYBErrorBlock)(NSError *error);
+
+/**
+ * This is a void block.
+ */
+typedef void (^HYBVoidBlock)(void);
+
+/**
+ *	This is a common block for handling to return a string value.
+ */
+typedef void (^HYBStringBlock)(NSString *result);
+
+/**
+ * For notification block.
+ */
+typedef void (^HYBNotificationBlock)(NSNotification *sender);
+
+/**
+ *	For return a bool block.
+ */
+typedef void (^HYBBOOLBlock)(BOOL result);
+
+/**
+ * For return a array block.
+ */
+typedef void (^HYBArrayBlock)(NSArray *list);
+
+/**
+ * For return a array and msg block.
+ */
+typedef void (^HYBArrayMessageBlock)(NSArray *list, NSString *msg);
+
+/**
+ * For return a dictionary block.
+ */
+typedef void (^HYBDictionaryBlock)(NSDictionary *response);
+
+/**
+ * For return a dictionary and a message block.
+ */
+typedef void (^HYBDictionaryMessageBlock)(NSDictionary *response, NSString *msg);
+
+/**
+ * For only return number block.
+ */
+typedef void (^HYBNumberBlock)(NSNumber *resultNumber);
+
+/**
+ * For number and message block.
+ */
+typedef void (^HYBNumberMessageBlock)(NSNumber *resultNumber, NSString *msg);
+
+/**
+ * Common return object block.
+ */
+typedef void (^HYBIdBlock)(id result);
+
+/**
+ * For single button block.
+ */
+typedef void(^HYBButtonBlock)(UIButton *sender);
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Common value change block.
+ *
+ *	@param sender	The responder
+ */
+typedef void(^HYBValueChangedBlock)(id sender);
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Common edit change block, eg: UITextField.
+ *
+ *	@param sender	The responder.
+ */
+typedef void(^HYBEditChangedBlock)(id sender);
+
+/**
+ * For button array block.
+ *
+ * @param index  index in the array.
+ * @param sender The responder.
+ */
+typedef void(^HYBButtonIndexBlock)(NSUInteger index, UIButton *sender);
+
+/**
+ * Gesture block callback.
+ */
+typedef void(^HYBGestureBlock)(UIGestureRecognizer *sender);
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	The long press gesture callback block.
+ *
+ *	@param sender	The long press gesture.
+ */
+typedef void(^HYBLongGestureBlock)(UILongPressGestureRecognizer *sender);
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	The tap gesture callback block.
+ *
+ *	@param sender	The tap gesture.
+ */
+typedef void(^HYBTapGestureBlock)(UITapGestureRecognizer *sender);
+
+/**
+ *	@author https://github.com/CoderJackyHuang
+ *
+ *	Masonry Kit Need To Use It.
+ */
+typedef void(^HYBConstraintMaker)(MASConstraintMaker *make);
+
+
+
 
 #endif /* AFKitMacro_h */

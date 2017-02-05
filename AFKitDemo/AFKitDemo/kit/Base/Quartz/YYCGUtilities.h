@@ -11,14 +11,10 @@
 
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
+#import "AFKitMacro.h"
 
-#if __has_include(<YYKit/YYKit.h>)
-#import <YYKit/YYKitMacro.h>
-#else
-#import "YYKitMacro.h"
-#endif
 
-YY_EXTERN_C_BEGIN
+
 NS_ASSUME_NONNULL_BEGIN
 
 /// Create an `ARGB` Bitmap context. Returns NULL if an error occurs.
@@ -335,4 +331,3 @@ static inline UIEdgeInsets UIEdgeInsetPixelCeil(UIEdgeInsets insets) {
 #endif
 
 NS_ASSUME_NONNULL_END
-YY_EXTERN_C_END

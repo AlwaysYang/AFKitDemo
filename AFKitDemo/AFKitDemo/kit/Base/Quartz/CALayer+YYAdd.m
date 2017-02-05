@@ -10,10 +10,9 @@
 //
 
 #import "CALayer+YYAdd.h"
-#import "YYKitMacro.h"
+#import "AFKitMacro.h"
 #import "YYCGUtilities.h"
 
-YYSYNTH_DUMMY_CLASS(CALayer_YYAdd)
 
 
 @implementation CALayer (YYAdd)
