@@ -95,6 +95,14 @@ return objc_getAssociatedObject(self, @selector(_setter_:)); \
 // Fast to get iOS system version
 #define kIOSVersion ([UIDevice currentDevice].systemVersion.floatValue)
 
+// Judge whether the device it is ipad.
+#define AFIsIPad \
+([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)]\
+&& [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+
+//App版本号
+#define APPVersion [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]
+
 #pragma mark - 重写NSLog
 
 //重写NSLog,Debug模式下打印日志和当前行数
@@ -157,6 +165,11 @@ return objc_getAssociatedObject(self, @selector(_setter_:)); \
 #define AFImageOfFile(Name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:Name ofType:nil]])
 
 #pragma mark - 系统单例
+#define AFAppDelegateInstance [[UIApplication sharedApplication] delegate]
+
+#define AFApplication        [UIApplication sharedApplication]
+
+#define AFKeyWindow          [UIApplication sharedApplication].keyWindow
 
 // More easy way to get user default object.
 #define AFUserDefaults [NSUserDefaults standardUserDefaults]
@@ -172,8 +185,17 @@ return objc_getAssociatedObject(self, @selector(_setter_:)); \
 [kNotificationCenter postNotificationName:notificationName object:nil userInfo:nil]
 
 // More easy way to post a notification with user info from notification center.
-#define kPostNotificationWithNameAndUserInfo(notificationName, userInfo) \
+#define AFPostNotificationWithNameAndUserInfo(notificationName, userInfo) \
 [kNotificationCenter postNotificationName:notificationName object:nil userInfo:userInfo]
+
+#pragma mark - 文件路径
+#define AFFilePath ([[NSFileManager defaultManager] URLForDirectory:NSCachesDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:YES error:nil])
+//获取temp
+#define AFPathTemp NSTemporaryDirectory()
+//获取沙盒 Document
+#define AFPathDocument [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject]
+//获取沙盒 Cache
+#define AFPathCache [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) firstObject]
 
 #pragma mark - 弹出框
 /*! 警告框-一个按钮【VC】 */
@@ -197,13 +219,17 @@ return objc_getAssociatedObject(self, @selector(_setter_:)); \
 // Judge whether it is a valid array.
 #define AFIsArray(objArray) (objArray != nil && [objArray isKindOfClass:[NSArray class]])
 
-// Judge whether the device it is ipad.
-#define AFIsIPad \
-([[UIDevice currentDevice] respondsToSelector:@selector(userInterfaceIdiom)]\
-&& [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
-
 // Judge whether current orientation is landscape.
 #define AFIsLandscape (UIInterfaceOrientationIsLandscape([[UIApplication sharedApplication] statusBarOrientation]))
+
+#pragma mark - 字体UIFONT
+//粗体
+#define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]
+//size
+#define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
+//name & size
+#define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
+
 
 #pragma mark - Blocks
 /**
