@@ -1,9 +1,9 @@
 //
 //  ViewController.m
-//  AFKitDemo
+//  AFTempProject
 //
-//  Created by AlwaysYang on 16/11/8.
-//  Copyright © 2016年 AlwaysYang. All rights reserved.
+//  Created by ZWS on 17/9/5.
+//  Copyright © 2017年 AF. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -17,7 +17,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.view.backgroundColor = COLOR_RED;
+    self.view.backgroundColor = [UIColor whiteColor];
+    if ([self respondsToSelector:@selector(setEdgesForExtendedLayout:)]) {
+        [self setEdgesForExtendedLayout: UIRectEdgeNone];
+    }
 }
 
 
