@@ -36,7 +36,9 @@
 }
 
 - (void)loadData{
-    NSArray *tempArr = @[@{CELLTITLE:@"九宫格算法",CELLVCNAME:@"GridViewController"}];
+    NSArray *tempArr = @[
+                         @{CELLTITLE:@"九宫格算法",CELLVCNAME:@"GridViewController"},
+                         @{CELLTITLE:@"控制器转场动画",CELLVCNAME:@"GridViewController"},];
     [self.dataSource addObjectsFromArray:tempArr];
     [self.tableView reloadData];
 }
