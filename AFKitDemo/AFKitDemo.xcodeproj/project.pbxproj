@@ -65,6 +65,8 @@
 		5742F2AF1DD21CCF006583E0 /* AFKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742F2AE1DD21CCF006583E0 /* AFKitDemoTests.m */; };
 		5742F2BA1DD21CCF006583E0 /* AFKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742F2B91DD21CCF006583E0 /* AFKitDemoUITests.m */; };
 		67BFED6C5EFE4A2DEEB2F0F7 /* libPods-AFKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A71E9E1CCA286EF80E43FA /* libPods-AFKitDemo.a */; };
+		9334B0021F9837380020C1D0 /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9334B0011F9837380020C1D0 /* TransitionViewController.m */; };
+		9334B0051F9838600020C1D0 /* BaseMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9334B0041F9838600020C1D0 /* BaseMenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -202,6 +204,10 @@
 		5742F2B51DD21CCF006583E0 /* AFKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5742F2B91DD21CCF006583E0 /* AFKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFKitDemoUITests.m; sourceTree = "<group>"; };
 		5742F2BB1DD21CCF006583E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9334B0001F9837380020C1D0 /* TransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
+		9334B0011F9837380020C1D0 /* TransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
+		9334B0031F9838600020C1D0 /* BaseMenuTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMenuTableViewController.h; sourceTree = "<group>"; };
+		9334B0041F9838600020C1D0 /* BaseMenuTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseMenuTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,9 +346,9 @@
 		46E4E55D1F5F8F2F003883BB /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				9334AFFE1F9836880020C1D0 /* View */,
+				9334AFFD1F9836800020C1D0 /* Model */,
 				46E4E5891F5F9A84003883BB /* ViewController */,
-				46E4E5871F5F9A7E003883BB /* Model */,
-				46E4E5881F5F9A7E003883BB /* View */,
 			);
 			name = Home;
 			path = home;
@@ -356,14 +362,6 @@
 			);
 			name = Other;
 			path = other;
-			sourceTree = "<group>";
-		};
-		46E4E55F1F5F908C003883BB /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Lib;
-			path = AFKitDemo/Lib;
 			sourceTree = "<group>";
 		};
 		46E4E5601F5F9093003883BB /* Base */ = {
@@ -386,6 +384,8 @@
 				46E4E5741F5F932E003883BB /* BaseViewController.m */,
 				46E4E5901F5F9FFE003883BB /* BaseNavigationController.h */,
 				46E4E5911F5F9FFE003883BB /* BaseNavigationController.m */,
+				9334B0031F9838600020C1D0 /* BaseMenuTableViewController.h */,
+				9334B0041F9838600020C1D0 /* BaseMenuTableViewController.m */,
 			);
 			path = BaseController;
 			sourceTree = "<group>";
@@ -440,22 +440,6 @@
 			path = AFKitDemo/Kit/Const;
 			sourceTree = SOURCE_ROOT;
 		};
-		46E4E5871F5F9A7E003883BB /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Model;
-			path = AFKitDemo/Main/Home/Model;
-			sourceTree = SOURCE_ROOT;
-		};
-		46E4E5881F5F9A7E003883BB /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = View;
-			path = AFKitDemo/Main/Home/View;
-			sourceTree = SOURCE_ROOT;
-		};
 		46E4E5891F5F9A84003883BB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -463,6 +447,8 @@
 				46E4E58B1F5F9A84003883BB /* HomeViewController.m */,
 				46E4E58D1F5F9AE7003883BB /* GridViewController.h */,
 				46E4E58E1F5F9AE7003883BB /* GridViewController.m */,
+				9334B0001F9837380020C1D0 /* TransitionViewController.h */,
+				9334B0011F9837380020C1D0 /* TransitionViewController.m */,
 			);
 			name = ViewController;
 			path = AFKitDemo/Main/Home/ViewController;
@@ -496,7 +482,7 @@
 		5742F2881DD21CCF006583E0 = {
 			isa = PBXGroup;
 			children = (
-				46E4E55F1F5F908C003883BB /* Lib */,
+				9334AFFF1F98369F0020C1D0 /* Lib */,
 				5742F2C71DD21D27006583E0 /* Kit */,
 				5742F2931DD21CCF006583E0 /* AFKitDemo */,
 				5742F2AD1DD21CCF006583E0 /* AFKitDemoTests */,
@@ -588,6 +574,27 @@
 				4C8B24A7DF85E36FC23B9C0A /* Pods-AFKitDemo.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		9334AFFD1F9836800020C1D0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9334AFFE1F9836880020C1D0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9334AFFF1F98369F0020C1D0 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		B47FC87CD00B9C477595DC84 /* Frameworks */ = {
@@ -754,13 +761,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AFKitDemo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE27CEDC04223CD79C35E3D4 /* [CP] Copy Pods Resources */ = {
@@ -769,9 +779,13 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-AFKitDemo/Pods-AFKitDemo-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -804,6 +818,7 @@
 				5742F2961DD21CCF006583E0 /* main.m in Sources */,
 				46A3ED9B1DD46F24008B1B27 /* UIDevice+AFAdd.m in Sources */,
 				46A3EDCB1DD46F34008B1B27 /* UIBezierPath+AFAdd.m in Sources */,
+				9334B0051F9838600020C1D0 /* BaseMenuTableViewController.m in Sources */,
 				46F2B4481DD5570600702485 /* UILabel+HYBMasonryKit.m in Sources */,
 				46E4E5781F5F96C2003883BB /* FindViewController.m in Sources */,
 				46A3ED9A1DD46F24008B1B27 /* UIControl+AFAdd.m in Sources */,
@@ -834,6 +849,7 @@
 				46A3EDD41DD47619008B1B27 /* UIViewController+AFAdd.m in Sources */,
 				46E4E5821F5F9725003883BB /* TabBarController.m in Sources */,
 				46A3EDC61DD46F34008B1B27 /* NSObject+AFAdd.m in Sources */,
+				9334B0021F9837380020C1D0 /* TransitionViewController.m in Sources */,
 				46A3ED801DD46EA4008B1B27 /* CALayer+YYAdd.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
