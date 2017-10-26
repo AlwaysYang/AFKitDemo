@@ -8,7 +8,6 @@
 
 #ifndef AFKitMacro_h
 #define AFKitMacro_h
-#import "Masonry.h"
 
 /**
  Synthsize a dynamic object property in @implementation scope.
