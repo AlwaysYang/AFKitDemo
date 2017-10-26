@@ -8,7 +8,7 @@
 
 #ifndef AFKitMacro_h
 #define AFKitMacro_h
-
+#import "masonry.h"
 /**
  Synthsize a dynamic object property in @implementation scope.
  It allows us to add custom properties to existing classes in categories.
