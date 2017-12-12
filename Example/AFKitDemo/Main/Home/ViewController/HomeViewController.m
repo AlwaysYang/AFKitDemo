@@ -8,7 +8,9 @@
 
 #import "HomeViewController.h"
 #import "GridViewController.h"
-
+#import "RuntimeViewController.h"
+#import "DataAccessViewController.h"
+#import "TransitionViewController.h"
 @interface HomeViewController ()
 
 @property (nonatomic,strong)NSMutableArray *dataSource;
@@ -38,7 +40,10 @@
 - (void)loadData{
     NSArray *tempArr = @[
                          @{CELLTITLE:@"九宫格算法",CELLVCNAME:@"GridViewController"},
-                         @{CELLTITLE:@"控制器转场动画",CELLVCNAME:@"GridViewController"},];
+                         @{CELLTITLE:@"控制器转场动画",CELLVCNAME:@"TransitionViewController"},
+                         @{CELLTITLE:@"runtime",CELLVCNAME:@"RuntimeViewController"},
+                         @{CELLTITLE:@"数据存取",CELLVCNAME:@"DataAccessViewController"}
+                         ];
     [self.dataSource addObjectsFromArray:tempArr];
     [self.tableView reloadData];
 }

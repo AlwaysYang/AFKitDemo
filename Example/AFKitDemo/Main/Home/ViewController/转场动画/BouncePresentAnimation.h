@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BouncePresentAnimation : NSObject
+@interface BouncePresentAnimation : NSObject <UIViewControllerAnimatedTransitioning>
 
 @end

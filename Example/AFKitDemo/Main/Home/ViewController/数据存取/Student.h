@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Student : NSObject
-
+@interface Student : NSObject <NSCoding>
+/**名字*/
+@property (nonatomic,copy)NSString * name;
+/** 年龄*/
+@property (nonatomic,assign)NSInteger age;
 @end

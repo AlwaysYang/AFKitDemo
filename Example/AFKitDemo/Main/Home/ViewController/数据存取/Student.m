@@ -10,4 +10,17 @@
 
 @implementation Student
 
+- (instancetype)initWithCoder:(NSCoder *)aDecoder{
+    if (self = [super init]) {
+        self.name = [aDecoder decodeObjectForKey:@"student.name"];
+        self.age = [aDecoder decodeIntegerForKey:@"student.age"];
+    }
+    return self;
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder{
+    [coder encodeObject:self.name forKey:@"student.name"];
+    [coder encodeInteger:self.age forKey:@"student.age"];
+}
+
 @end

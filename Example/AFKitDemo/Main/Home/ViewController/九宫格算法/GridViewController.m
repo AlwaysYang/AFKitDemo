@@ -25,7 +25,7 @@
     CGFloat viewW = (ScreenWidth - (col - 1) * margin) / col;
     CGFloat viewH = viewW;
     for (int i = 0; i < 7; i ++) {
-        NSInteger index = i;//
+        NSInteger index = i;//·
         CGFloat viewX = (index % col ) * (viewW + margin);
         NSLog(@"----%ld",(index % col ));
         CGFloat viewY = (index / col ) * (viewH + 10);

@@ -14,7 +14,6 @@
 		46E4E57F1F5F9719003883BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E4E57E1F5F9719003883BB /* ViewController.m */; };
 		46E4E5821F5F9725003883BB /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E4E5811F5F9725003883BB /* TabBarController.m */; };
 		46E4E58C1F5F9A84003883BB /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E4E58B1F5F9A84003883BB /* HomeViewController.m */; };
-		46E4E58F1F5F9AE7003883BB /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E4E58E1F5F9AE7003883BB /* GridViewController.m */; };
 		46E4E5921F5F9FFE003883BB /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E4E5911F5F9FFE003883BB /* BaseNavigationController.m */; };
 		5742F2961DD21CCF006583E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742F2951DD21CCF006583E0 /* main.m */; };
 		5742F2991DD21CCF006583E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742F2981DD21CCF006583E0 /* AppDelegate.m */; };
@@ -24,8 +23,17 @@
 		5742F2AF1DD21CCF006583E0 /* AFKitDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742F2AE1DD21CCF006583E0 /* AFKitDemoTests.m */; };
 		5742F2BA1DD21CCF006583E0 /* AFKitDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5742F2B91DD21CCF006583E0 /* AFKitDemoUITests.m */; };
 		67BFED6C5EFE4A2DEEB2F0F7 /* libPods-AFKitDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A71E9E1CCA286EF80E43FA /* libPods-AFKitDemo.a */; };
-		9334B0021F9837380020C1D0 /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9334B0011F9837380020C1D0 /* TransitionViewController.m */; };
+		93167CDA1FDFB0E600011961 /* BouncePresentAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93167CD91FDFB0E600011961 /* BouncePresentAnimation.m */; };
+		93167CDD1FDFB6DE00011961 /* BounceDismissAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 93167CDC1FDFB6DE00011961 /* BounceDismissAnimation.m */; };
+		93167CE01FDFBC8800011961 /* SwipeUpInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 93167CDF1FDFBC8800011961 /* SwipeUpInteractiveTransition.m */; };
 		9334B0051F9838600020C1D0 /* BaseMenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9334B0041F9838600020C1D0 /* BaseMenuTableViewController.m */; };
+		933660DD1FDE6BEF00625D6D /* DataAccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933660DC1FDE6BEF00625D6D /* DataAccessViewController.m */; };
+		933660ED1FDE6CA200625D6D /* TransitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933660E41FDE6CA200625D6D /* TransitionViewController.m */; };
+		933660EE1FDE6CA200625D6D /* RuntimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933660E71FDE6CA200625D6D /* RuntimeViewController.m */; };
+		933660EF1FDE6CA200625D6D /* UIButton+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 933660E91FDE6CA200625D6D /* UIButton+runtime.m */; };
+		933660F01FDE6CA200625D6D /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 933660EC1FDE6CA200625D6D /* GridViewController.m */; };
+		933660F31FDE73D100625D6D /* Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 933660F21FDE73D100625D6D /* Student.m */; };
+		933660FC1FDE84E400625D6D /* AFKitDemoModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 933660FA1FDE84E400625D6D /* AFKitDemoModel.xcdatamodeld */; };
 		9354968D1FA1DB8000EED486 /* UIGestureRecognizer+HYBHelperBlockKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 935496371FA1DB7F00EED486 /* UIGestureRecognizer+HYBHelperBlockKit.m */; };
 		9354968E1FA1DB8000EED486 /* UIImageView+HYBMasonryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 935496391FA1DB7F00EED486 /* UIImageView+HYBMasonryKit.m */; };
 		9354968F1FA1DB8000EED486 /* UILabel+HYBMasonryKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9354963B1FA1DB7F00EED486 /* UILabel+HYBMasonryKit.m */; };
@@ -100,8 +108,6 @@
 		46E4E5811F5F9725003883BB /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		46E4E58A1F5F9A84003883BB /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		46E4E58B1F5F9A84003883BB /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		46E4E58D1F5F9AE7003883BB /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
-		46E4E58E1F5F9AE7003883BB /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
 		46E4E5901F5F9FFE003883BB /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
 		46E4E5911F5F9FFE003883BB /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
 		4C8B24A7DF85E36FC23B9C0A /* Pods-AFKitDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AFKitDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-AFKitDemo/Pods-AFKitDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,10 +126,27 @@
 		5742F2B51DD21CCF006583E0 /* AFKitDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AFKitDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5742F2B91DD21CCF006583E0 /* AFKitDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AFKitDemoUITests.m; sourceTree = "<group>"; };
 		5742F2BB1DD21CCF006583E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9334B0001F9837380020C1D0 /* TransitionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
-		9334B0011F9837380020C1D0 /* TransitionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
+		93167CD81FDFB0E600011961 /* BouncePresentAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimation.h; sourceTree = "<group>"; };
+		93167CD91FDFB0E600011961 /* BouncePresentAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimation.m; sourceTree = "<group>"; };
+		93167CDB1FDFB6DE00011961 /* BounceDismissAnimation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BounceDismissAnimation.h; sourceTree = "<group>"; };
+		93167CDC1FDFB6DE00011961 /* BounceDismissAnimation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BounceDismissAnimation.m; sourceTree = "<group>"; };
+		93167CDE1FDFBC8800011961 /* SwipeUpInteractiveTransition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwipeUpInteractiveTransition.h; sourceTree = "<group>"; };
+		93167CDF1FDFBC8800011961 /* SwipeUpInteractiveTransition.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SwipeUpInteractiveTransition.m; sourceTree = "<group>"; };
 		9334B0031F9838600020C1D0 /* BaseMenuTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseMenuTableViewController.h; sourceTree = "<group>"; };
 		9334B0041F9838600020C1D0 /* BaseMenuTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseMenuTableViewController.m; sourceTree = "<group>"; };
+		933660DB1FDE6BEF00625D6D /* DataAccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataAccessViewController.h; sourceTree = "<group>"; };
+		933660DC1FDE6BEF00625D6D /* DataAccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataAccessViewController.m; sourceTree = "<group>"; };
+		933660E31FDE6CA200625D6D /* TransitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransitionViewController.h; sourceTree = "<group>"; };
+		933660E41FDE6CA200625D6D /* TransitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransitionViewController.m; sourceTree = "<group>"; };
+		933660E61FDE6CA200625D6D /* RuntimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RuntimeViewController.h; sourceTree = "<group>"; };
+		933660E71FDE6CA200625D6D /* RuntimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RuntimeViewController.m; sourceTree = "<group>"; };
+		933660E81FDE6CA200625D6D /* UIButton+runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+runtime.h"; sourceTree = "<group>"; };
+		933660E91FDE6CA200625D6D /* UIButton+runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+runtime.m"; sourceTree = "<group>"; };
+		933660EB1FDE6CA200625D6D /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GridViewController.h; sourceTree = "<group>"; };
+		933660EC1FDE6CA200625D6D /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GridViewController.m; sourceTree = "<group>"; };
+		933660F11FDE73D100625D6D /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
+		933660F21FDE73D100625D6D /* Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Student.m; sourceTree = "<group>"; };
+		933660FB1FDE84E400625D6D /* AFKitDemoModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AFKitDemoModel.xcdatamodel; sourceTree = "<group>"; };
 		935496341FA1DB7F00EED486 /* AFKitMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFKitMacro.h; sourceTree = "<group>"; };
 		935496361FA1DB7F00EED486 /* UIGestureRecognizer+HYBHelperBlockKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+HYBHelperBlockKit.h"; sourceTree = "<group>"; };
 		935496371FA1DB7F00EED486 /* UIGestureRecognizer+HYBHelperBlockKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+HYBHelperBlockKit.m"; sourceTree = "<group>"; };
@@ -262,8 +285,6 @@
 		46E4E55D1F5F8F2F003883BB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				9334AFFE1F9836880020C1D0 /* View */,
-				9334AFFD1F9836800020C1D0 /* Model */,
 				46E4E5891F5F9A84003883BB /* ViewController */,
 			);
 			name = Home;
@@ -349,12 +370,12 @@
 		46E4E5891F5F9A84003883BB /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				933660EA1FDE6CA200625D6D /* 九宫格算法 */,
+				933660E21FDE6CA200625D6D /* 转场动画 */,
+				933660E51FDE6CA200625D6D /* 运行时 */,
+				933660DA1FDE6BEF00625D6D /* 数据存取 */,
 				46E4E58A1F5F9A84003883BB /* HomeViewController.h */,
 				46E4E58B1F5F9A84003883BB /* HomeViewController.m */,
-				46E4E58D1F5F9AE7003883BB /* GridViewController.h */,
-				46E4E58E1F5F9AE7003883BB /* GridViewController.m */,
-				9334B0001F9837380020C1D0 /* TransitionViewController.h */,
-				9334B0011F9837380020C1D0 /* TransitionViewController.m */,
 			);
 			name = ViewController;
 			path = AFKitDemo/Main/Home/ViewController;
@@ -435,25 +456,58 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		9334AFFD1F9836800020C1D0 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		9334AFFE1F9836880020C1D0 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		9334AFFF1F98369F0020C1D0 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Lib;
+			sourceTree = "<group>";
+		};
+		933660DA1FDE6BEF00625D6D /* 数据存取 */ = {
+			isa = PBXGroup;
+			children = (
+				933660DB1FDE6BEF00625D6D /* DataAccessViewController.h */,
+				933660DC1FDE6BEF00625D6D /* DataAccessViewController.m */,
+				933660F11FDE73D100625D6D /* Student.h */,
+				933660F21FDE73D100625D6D /* Student.m */,
+				933660FA1FDE84E400625D6D /* AFKitDemoModel.xcdatamodeld */,
+			);
+			path = "数据存取";
+			sourceTree = "<group>";
+		};
+		933660E21FDE6CA200625D6D /* 转场动画 */ = {
+			isa = PBXGroup;
+			children = (
+				933660E31FDE6CA200625D6D /* TransitionViewController.h */,
+				933660E41FDE6CA200625D6D /* TransitionViewController.m */,
+				93167CD81FDFB0E600011961 /* BouncePresentAnimation.h */,
+				93167CD91FDFB0E600011961 /* BouncePresentAnimation.m */,
+				93167CDB1FDFB6DE00011961 /* BounceDismissAnimation.h */,
+				93167CDC1FDFB6DE00011961 /* BounceDismissAnimation.m */,
+				93167CDE1FDFBC8800011961 /* SwipeUpInteractiveTransition.h */,
+				93167CDF1FDFBC8800011961 /* SwipeUpInteractiveTransition.m */,
+			);
+			path = "转场动画";
+			sourceTree = "<group>";
+		};
+		933660E51FDE6CA200625D6D /* 运行时 */ = {
+			isa = PBXGroup;
+			children = (
+				933660E71FDE6CA200625D6D /* RuntimeViewController.m */,
+				933660E61FDE6CA200625D6D /* RuntimeViewController.h */,
+				933660E81FDE6CA200625D6D /* UIButton+runtime.h */,
+				933660E91FDE6CA200625D6D /* UIButton+runtime.m */,
+			);
+			path = "运行时";
+			sourceTree = "<group>";
+		};
+		933660EA1FDE6CA200625D6D /* 九宫格算法 */ = {
+			isa = PBXGroup;
+			children = (
+				933660EB1FDE6CA200625D6D /* GridViewController.h */,
+				933660EC1FDE6CA200625D6D /* GridViewController.m */,
+			);
+			path = "九宫格算法";
 			sourceTree = "<group>";
 		};
 		935496321FA1DB7F00EED486 /* kit */ = {
@@ -808,23 +862,30 @@
 				935496AF1FA1DB8000EED486 /* UIScreen+AFAdd.m in Sources */,
 				935496981FA1DB8000EED486 /* NSDate+AFAdd.m in Sources */,
 				935496B11FA1DB8000EED486 /* UITableView+AFAdd.m in Sources */,
+				933660F31FDE73D100625D6D /* Student.m in Sources */,
 				935496A51FA1DB8000EED486 /* HYBHelperKitBaseController.m in Sources */,
 				5742F2961DD21CCF006583E0 /* main.m in Sources */,
+				93167CDD1FDFB6DE00011961 /* BounceDismissAnimation.m in Sources */,
 				935496AB1FA1DB8000EED486 /* UIFont+AFAdd.m in Sources */,
 				9334B0051F9838600020C1D0 /* BaseMenuTableViewController.m in Sources */,
 				9354968F1FA1DB8000EED486 /* UILabel+HYBMasonryKit.m in Sources */,
 				935496911FA1DB8000EED486 /* UITableView+HYBMasonryKit.m in Sources */,
 				46E4E5781F5F96C2003883BB /* FindViewController.m in Sources */,
+				933660FC1FDE84E400625D6D /* AFKitDemoModel.xcdatamodeld in Sources */,
+				933660EE1FDE6CA200625D6D /* RuntimeViewController.m in Sources */,
 				935496901FA1DB8000EED486 /* UIScrollView+HYBMasonryKit.m in Sources */,
+				93167CE01FDFBC8800011961 /* SwipeUpInteractiveTransition.m in Sources */,
 				935496A91FA1DB8000EED486 /* UIControl+HYBHelperBlockKit.m in Sources */,
 				935496AD1FA1DB8000EED486 /* UIImage+AFAdd.m in Sources */,
+				933660ED1FDE6CA200625D6D /* TransitionViewController.m in Sources */,
 				935496A71FA1DB8000EED486 /* UIColor+AFAdd.m in Sources */,
 				9354969A1FA1DB8000EED486 /* NSDictionary+AFAdd.m in Sources */,
 				935496B21FA1DB8000EED486 /* UITextField+AFAdd.m in Sources */,
 				935496951FA1DB8000EED486 /* UIWebView+HYBMasonryKit.m in Sources */,
-				46E4E58F1F5F9AE7003883BB /* GridViewController.m in Sources */,
 				935496B01FA1DB8000EED486 /* UIScrollView+AFAdd.m in Sources */,
+				93167CDA1FDFB0E600011961 /* BouncePresentAnimation.m in Sources */,
 				46E4E58C1F5F9A84003883BB /* HomeViewController.m in Sources */,
+				933660EF1FDE6CA200625D6D /* UIButton+runtime.m in Sources */,
 				935496B31FA1DB8000EED486 /* UIView+YYAdd.m in Sources */,
 				9354968D1FA1DB8000EED486 /* UIGestureRecognizer+HYBHelperBlockKit.m in Sources */,
 				935496961FA1DB8000EED486 /* NSArray+AFAdd.m in Sources */,
@@ -844,11 +905,12 @@
 				9354969B1FA1DB8000EED486 /* NSNotificationCenter+AFAdd.m in Sources */,
 				935496A11FA1DB8000EED486 /* UIApplication+AFAdd.m in Sources */,
 				935496A41FA1DB8000EED486 /* YYCGUtilities.m in Sources */,
-				9334B0021F9837380020C1D0 /* TransitionViewController.m in Sources */,
 				935496A81FA1DB8000EED486 /* UIControl+AFAdd.m in Sources */,
 				935496B41FA1DB8000EED486 /* UIViewController+AFAdd.m in Sources */,
+				933660F01FDE6CA200625D6D /* GridViewController.m in Sources */,
 				935496931FA1DB8000EED486 /* UIView+HYBHelperBlockKit.m in Sources */,
 				935496AC1FA1DB8000EED486 /* UIGestureRecognizer+AFAdd.m in Sources */,
+				933660DD1FDE6BEF00625D6D /* DataAccessViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1111,6 +1173,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		933660FA1FDE84E400625D6D /* AFKitDemoModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				933660FB1FDE84E400625D6D /* AFKitDemoModel.xcdatamodel */,
+			);
+			currentVersion = 933660FB1FDE84E400625D6D /* AFKitDemoModel.xcdatamodel */;
+			path = AFKitDemoModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5742F2891DD21CCF006583E0 /* Project object */;
 }
