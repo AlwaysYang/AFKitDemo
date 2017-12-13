@@ -86,7 +86,7 @@
     //取出
     NSLog(@"取出--%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"name"]);
     
-    
+
     //自定义对象
     Student *s = [[Student alloc] init];
     s.name = @"小红";
