@@ -11,6 +11,7 @@
 #import "HomeViewController.h"
 #import "FindViewController.h"
 #import "ViewController.h"
+#import <CoreLocation/CoreLocation.h>
 @interface TabBarController ()<UITabBarControllerDelegate>
 
 @end
@@ -41,6 +42,16 @@
         navC.title = tabNames[i];
         i ++;
     }
+    NSString *JD = @"114.428131";
+    NSString *WD = @"30.486029";
+    double jdDouble = [JD doubleValue];
+    double wdDouble = [WD doubleValue];
+    
+    NSDecimalNumber * dnmber = [NSDecimalNumber decimalNumberWithString:JD];
+    double dnmberDouble = [dnmber doubleValue];
+    double testd = 114.428131;
+    CLLocationCoordinate2D loction = CLLocationCoordinate2DMake([JD doubleValue], [WD doubleValue]);
+
 }
 
 - (void)didReceiveMemoryWarning {

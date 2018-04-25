@@ -10,6 +10,7 @@
 #import "Student.h"
 #import "UIButton+runtime.h"
 #import <CoreData/CoreData.h>
+#import "NSObject+AFAdd.h"
 #define KUserDefaults [NSUserDefaults standardUserDefaults]
 
 @interface DataAccessViewController ()
@@ -62,10 +63,28 @@
     path = [path stringByAppendingString:@"/student.plist"];
     NSLog(@"存储地址--path:%@",path);
     [dict writeToFile:path atomically:YES];
-    
     //取出
     NSDictionary *outDic = [NSDictionary dictionaryWithContentsOfFile:path];
     NSLog(@"取出对象--outDic:%@",outDic);
+    
+    #warning 下面的方式存不进去
+    NSString *path2 = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"studentModel.plist"];
+    Student *stu = [[Student alloc] init];
+    stu.name = @"mig";
+    stu.age = 19;
+    [@[stu] writeToFile:path2 atomically:YES];
+    NSArray *stuarr = [NSArray arrayWithContentsOfFile:path2];
+    NSLog(@"取出对象--outArr:%@",stuarr);
+    
+    NSString *path3 = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:@"studentModelReal.plist"];
+    Student *stu1 = [[Student alloc] init];
+    stu1.name = @"mig";
+    stu1.age = 19;
+    NSData *dataIn = [NSKeyedArchiver archivedDataWithRootObject:@[stu1]];
+    [dataIn writeToFile:path3 atomically:YES];
+    NSData *dataOut = [NSData dataWithContentsOfFile:path3];
+    NSArray *stuarr3 = [NSKeyedUnarchiver unarchiveObjectWithData:dataOut];
+    NSLog(@"取出对象--outArr:%@",stuarr3);
 }
 
 /*
@@ -94,13 +113,33 @@
     [KUserDefaults setObject:[NSKeyedArchiver archivedDataWithRootObject:s] forKey:@"student"];
     //取出
     NSLog(@"取出--%@",[NSKeyedUnarchiver unarchiveObjectWithData:[[NSUserDefaults standardUserDefaults] valueForKey:@"student"]]);
+    
 }
 
 - (void)DataAccessWithNSKeyedArchiver{
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
-    path = [path stringByAppendingString:@"/NSKeyedArchiver"];
+    path = [path stringByAppendingString:@"/student.archiver"];
     [NSKeyedArchiver archiveRootObject:@[@"1",@"2"] toFile:path];
     NSLog(@"取出--%@",[NSKeyedUnarchiver unarchiveObjectWithFile:path]);
+    
+    NSString *pathT = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    pathT = [pathT stringByAppendingString:@"/studentModelArchiver.plist"];
+    //自定义对象
+    Student *s = [[Student alloc] init];
+    s.name = @"小红";
+    s.age = 12;
+    [NSKeyedArchiver archiveRootObject:@[s] toFile:pathT];
+    NSArray *sarr = [NSKeyedUnarchiver unarchiveObjectWithFile:pathT];
+    NSLog(@"取出model数组--%@",sarr);
+    for (Student *s in sarr) {
+        NSLog(@"%@",s.name);
+        NSLog(@"%ld",s.age);
+    }
+    for (int i = 0; i < sarr.count; i++) {
+        Student *s = sarr[i];
+        NSLog(@"%@",s.name);
+        NSLog(@"%ld",s.age);
+    }
 }
 
 

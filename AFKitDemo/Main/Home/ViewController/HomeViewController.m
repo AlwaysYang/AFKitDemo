@@ -11,13 +11,18 @@
 #import "RuntimeViewController.h"
 #import "DataAccessViewController.h"
 #import "TransitionViewController.h"
+#import "MRViewController.h"
+#import "GSBlurViewController.h"
+#import "GCDViewController.h"
 @interface HomeViewController ()
 
 @property (nonatomic,strong)NSMutableArray *dataSource;
 
 @end
 
-@implementation HomeViewController
+@implementation HomeViewController{
+    BOOL _showTempCell;
+}
 
 - (NSMutableArray *)dataSource{
     if (_dataSource == nil) {
@@ -40,9 +45,13 @@
 - (void)loadData{
     NSArray *tempArr = @[
                          @{CELLTITLE:@"九宫格算法",CELLVCNAME:@"GridViewController"},
+                         @{CELLTITLE:@"测试",CELLVCNAME:@"GridViewController"},
                          @{CELLTITLE:@"控制器转场动画",CELLVCNAME:@"TransitionViewController"},
                          @{CELLTITLE:@"runtime",CELLVCNAME:@"RuntimeViewController"},
-                         @{CELLTITLE:@"数据存取",CELLVCNAME:@"DataAccessViewController"}
+                         @{CELLTITLE:@"数据存取",CELLVCNAME:@"DataAccessViewController"},
+                         @{CELLTITLE:@"MVVM+RAC",CELLVCNAME:@"MRViewController"},
+                         @{CELLTITLE:@"高斯模糊",CELLVCNAME:@"GSBlurViewController"},
+                         @{CELLTITLE:@"GCD",CELLVCNAME:@"GCDViewController"},
                          ];
     [self.dataSource addObjectsFromArray:tempArr];
     [self.tableView reloadData];
@@ -57,8 +66,24 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)idp {
     [tableView deselectRowAtIndexPath:idp animated:YES];
-    Class vcClass = NSClassFromString(self.dataSource[idp.row][CELLVCNAME]);
-    [self.navigationController pushViewController:[[vcClass alloc] init] animated:YES];
+    if (idp.row == 0) {
+        _showTempCell = !_showTempCell;
+        [tableView beginUpdates];
+        [tableView endUpdates];
+        return;
+    }
+    NSDictionary *configDic = self.dataSource[idp.row];
+    Class vcClass = NSClassFromString(configDic[CELLVCNAME]);
+    UIViewController *vc = [[vcClass alloc] init];
+    vc.navigationItem.title = configDic[CELLTITLE];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (indexPath.row == 1) {
+        return _showTempCell ? 44.f : 0;
+    }
+    return 44.f;
 }
 
 #pragma mark | UITableViewdsNearbyPeople
