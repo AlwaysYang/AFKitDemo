@@ -1,4 +1,7 @@
 PODS:
+  - AFKit (1.0.1):
+    - Masonry
+    - MBProgressHUD
   - AFNetworking (3.1.0):
     - AFNetworking/NSURLSession (= 3.1.0)
     - AFNetworking/Reachability (= 3.1.0)
@@ -24,6 +27,7 @@ PODS:
   - UICKeyChainStore (2.1.0)
 
 DEPENDENCIES:
+  - AFKit
   - AFNetworking (~> 3.0)
   - FCUUID
   - Masonry
@@ -32,7 +36,20 @@ DEPENDENCIES:
   - ReactiveObjC
   - SVProgressHUD
 
+SPEC REPOS:
+  trunk:
+    - AFKit
+    - AFNetworking
+    - FCUUID
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - ReactiveObjC
+    - SVProgressHUD
+    - UICKeyChainStore
+
 SPEC CHECKSUMS:
+  AFKit: d60593974e18ffffa33bbba597b625a41577c413
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   FCUUID: bb054fc90cd7cd99320f9f6ff8e130fe607fba05
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
@@ -42,6 +59,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   UICKeyChainStore: f1cbd42216a113f0165de1e733e62905b8823432
 
-PODFILE CHECKSUM: 5ce254269489f8204e0d209a2f5c5f7865a4226a
+PODFILE CHECKSUM: cb74c0b19305bb0906738db0396a33379a6e0081
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.8.4

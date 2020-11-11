@@ -19,6 +19,8 @@ pod 'Masonry'
 
 pod 'ReactiveObjC'
 
+pod 'AFKit'
+
 
 end
 
